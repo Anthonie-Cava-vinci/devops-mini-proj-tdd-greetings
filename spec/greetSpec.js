@@ -1,7 +1,15 @@
-const greet = require('../greet.js')
+const greet = require('../greet');
 
 describe('greet', () => {
-  it('1. greet a personne', () => {
-    expect(greet('Jean-Kevin')).toBe('Hello, Jean-Kevin.')
-  })
-})
+  it('1. Greet a person', () => {
+    expect(greet('Jean-Kevin')).toBe('Hello, Jean-Kevin.');
+  });
+
+  it('2. Handle null, undefined, or " "', () => {
+    expect(greet(null)).toBe('Hello, my friend.');
+    expect(greet(undefined)).toBe('Hello, my friend.');
+    expect(greet(' ')).toBe('Hello, my friend.');
+    // Nouveau test pour la chaîne vide
+    expect(greet('')).toBe('Hello, my friend.');
+  });
+});
