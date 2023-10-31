@@ -20,6 +20,10 @@ describe('greet', () => {
   it('4. greet two people', () => {
     expect(greet(['Kratos', 'Thanathos'])).toBe('Hello, Kratos and Thanathos.');
   });
+
+  it('5. Handle more than two names', () => {
+    expect(greet(['Kratos', 'Thanathos', 'Hypnos'])).toBe('Hello, Kratos, Thanathos and Hypnos.');
+  });
   
 
   

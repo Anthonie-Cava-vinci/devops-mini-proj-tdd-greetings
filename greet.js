@@ -20,6 +20,11 @@ function greet(name) {
     if (name.length === 2) {
         return `Hello, ${name[0]} and ${name[1]}.`;
     }
+
+    // Case 5: Handle more than two names
+    if(name.length > 2){
+      return `Hello, ${name.slice(0,-1).join(', ')} and ${name.slice(-1)}.`;
+    }
   
 }
 module.exports = greet;
