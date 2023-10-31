@@ -9,7 +9,7 @@ describe('greet', () => {
     expect(greet(null)).toBe('Hello, my friend.');
     expect(greet(undefined)).toBe('Hello, my friend.');
     expect(greet(' ')).toBe('Hello, my friend.');
-    // Nouveau test pour la chaîne vide
+    
     expect(greet('')).toBe('Hello, my friend.');
   });
 });
