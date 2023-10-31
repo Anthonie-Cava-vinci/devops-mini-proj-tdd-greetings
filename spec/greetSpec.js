@@ -28,5 +28,11 @@ describe('greet', () => {
   it('6. Handle normal and uppercase names', () => {
     expect(greet(['KRATOS', 'Thanathos', 'Hypnos'])).toBe('Hello, Thanathos and Hypnos. AND HELLO KRATOS!');
   });
+
+  it('7. Handle multiple names and language', () => {
+    expect(greet(['Kratos', 'Thanathos'], 'FR')).toBe('Bonjour, Kratos et Thanathos.');
+    expect(greet(['Kratos', 'Thanathos', 'Hypnos'], 'NL')).toBe('Hallo, Kratos, Thanathos en Hypnos.');
+  });
+  
   
 });
