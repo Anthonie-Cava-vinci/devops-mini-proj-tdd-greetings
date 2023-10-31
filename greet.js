@@ -1,4 +1,4 @@
-function greet(name) {
+function greet(name, language = 'EN') {
   if(!Array.isArray(name)){
     // Case 2: Handle null, undefined, '', ' '
     if (!name || name.trim() === '') {
@@ -14,8 +14,13 @@ function greet(name) {
     return `Hello, ${name}.`;
   }
   
-  // Case 4: Greet two people
+  // Case 4: Greet two people (case 7 with)
   if (name.length === 2) {
+    if(language === 'FR'){
+      return `Bonjour, ${name[0]} et ${name[1]}.`;
+    }else if(language === 'NL'){
+      return `Hallo, ${name[0]} en ${name[1]}.`
+    }
     return `Hello, ${name[0]} and ${name[1]}.`;
   }
 
@@ -33,15 +38,15 @@ function greet(name) {
     return `Hello, ${normalNames.slice(0, -1).join(', ')} and ${normalNames.slice(-1)}. AND HELLO ${upperCaseNames.join(' ')}!`;
   } 
 
-  // Case 5: Handle more than two names
+  // Case 5: Handle more than two names (case 7 with)
   if(name.length > 2){
-    return `Hello, ${name.slice(0,-1).join(', ')} and ${name.slice(-1)}.`;
-  }
-
-  
-
-
-  
+    if(language === 'FR'){
+      return `Bonjour, ${name.slice(0,-1).join(', ')} et ${name.slice(-1)}.`
+    }else if(language === 'NL'){
+      return `Hallo, ${name.slice(0,-1).join(', ')} en ${name.slice(-1)}.`
+    }
+    return `Hello, ${name.slice(0,-1).join(', ')} and ${name.slice(-1)}.`
+  } 
   
 }
 module.exports = greet;
