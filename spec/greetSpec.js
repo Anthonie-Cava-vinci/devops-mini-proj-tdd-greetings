@@ -12,4 +12,8 @@ describe('greet', () => {
     
     expect(greet('')).toBe('Hello, my friend.');
   });
+
+  it('3. Handle uppercase names', () => {
+    expect(greet('KENOBI')).toBe('HELLO, KENOBI!');
+  });
 });
