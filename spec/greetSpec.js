@@ -16,4 +16,11 @@ describe('greet', () => {
   it('3. Handle uppercase names', () => {
     expect(greet('KENOBI')).toBe('HELLO, KENOBI!');
   });
+
+  it('4. greet two people', () => {
+    expect(greet(['Kratos', 'Thanathos'])).toBe('Hello, Kratos and Thanathos.');
+  });
+  
+
+  
 });
