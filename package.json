@@ -56,7 +56,7 @@
         "lint:fix": "eslint --fix .",
         "code:fix": "prettier --write . && eslint --fix .",
         "commit": "cz",
-        "build": "webpack --config webpack.config.js"
+        "build": "webpack ./src/greet.js -o dist/"
     },
     "author": "",
     "license": "ISC",
