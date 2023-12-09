@@ -20,5 +20,7 @@ jobs:
             - run: |
                   npm run prettier 
                   echo "formatté"
-            - run: npm run test
+            - run: |
+                  npm run test
+                  echo "testé"
             - run: npm run build
