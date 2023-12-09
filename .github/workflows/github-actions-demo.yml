@@ -17,6 +17,9 @@ jobs:
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
             - run: npm install
+            - name: Display start time
+              run: |
+                  echo "Pipeline started at $(date)"
             - run: |
                   npm run prettier 
                   echo "formatté"
@@ -26,3 +29,4 @@ jobs:
             - run: |
                   npm run build
                   echo "buildé"
+            
