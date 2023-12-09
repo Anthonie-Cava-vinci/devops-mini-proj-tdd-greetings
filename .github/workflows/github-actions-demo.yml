@@ -17,6 +17,8 @@ jobs:
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
             - run: npm install
-            - run: npm run prettier echo "formatté"
-            - run: npm run test echo "testé"
-            - run: npm run build echo "buildé"
+            - run: |
+                    npm run prettier 
+                    echo "formatté" 
+            - run: npm run test 
+            - run: npm run build 
