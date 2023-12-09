@@ -16,15 +16,21 @@ jobs:
               run: |
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
-            - run: npm install
+            - name: Install dependencies
+              run: npm install
+
             - name: Display start time
               run: |
                   echo "Pipeline started at $(date +"%T")"
-            - run: |
+
+            - name: Prettier formatting
+              run: |
                   npm run prettier 
                   echo "formatté"
-            - run: |
-                  npm run test
+
+            - name: Run Jest tests
+              run: |
+                  npm run test -- --coverage
                   echo "testé"
             - run: |
                   npm run build
