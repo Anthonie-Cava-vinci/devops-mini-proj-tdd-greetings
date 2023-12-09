@@ -29,3 +29,6 @@ jobs:
             - run: |
                   npm run build
                   echo "buildé"
+            - name: Display end time
+              run: |
+                  echo "Pipeline ended at $(date)"
