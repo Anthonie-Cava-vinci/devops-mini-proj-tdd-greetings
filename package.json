@@ -49,7 +49,7 @@
         "wrap-ansi-cjs": "^7.0.0"
     },
     "scripts": {
-        "test": "jest",
+        "test": "jest --coverage",
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
         "lint": "eslint .",

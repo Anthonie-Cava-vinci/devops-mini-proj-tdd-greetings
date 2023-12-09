@@ -24,8 +24,18 @@ jobs:
                   npm run prettier 
                   echo "formatté"
             - run: |
-                  npm run test
+                  npm run test -- --coverage
                   echo "testé"
+                  - name: Check Jest coverage
+                  run: |
+                    COVERAGE_THRESHOLD=80
+                    ACTUAL_COVERAGE=$(sed -n 's/^Statements.*: \([0-9]*.[0-9]*\)%.*/\1/p' coverage/lcov-report/index.html)
+                    if (( $(echo "$ACTUAL_COVERAGE < $COVERAGE_THRESHOLD" | bc -l) )); then
+                      echo "Coverage is below the threshold ($ACTUAL_COVERAGE%)"
+                      exit 1
+                    else
+                      echo "Coverage is above the threshold ($ACTUAL_COVERAGE%)"
+                    fi
             - run: |
                   npm run build
                   echo "buildé"
