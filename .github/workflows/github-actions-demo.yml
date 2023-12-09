@@ -32,3 +32,6 @@ jobs:
             - name: Display end time
               run: |
                   echo "Pipeline ended at $(date +"%T")"
+            - name: Display success message
+              if: ${{ success() }}
+              run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
