@@ -19,6 +19,6 @@ jobs:
             - run: npm install
             - run: |
                   npm run prettier 
-                  echo "formatté!"
+                  echo "formatté"
             - run: npm run test
             - run: npm run build
