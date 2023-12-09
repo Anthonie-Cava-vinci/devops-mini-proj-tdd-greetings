@@ -23,4 +23,6 @@ jobs:
             - run: |
                   npm run test
                   echo "testé"
-            - run: npm run build
+            - run: |
+                  npm run build
+                  echo "buildé"
