@@ -19,7 +19,7 @@ jobs:
             - run: npm install
             - name: Display start time
               run: |
-                  echo "Pipeline started at $(date)"
+                  echo "Pipeline started at $(date +"%T")"
             - run: |
                   npm run prettier 
                   echo "formatté"
@@ -31,4 +31,4 @@ jobs:
                   echo "buildé"
             - name: Display end time
               run: |
-                  echo "Pipeline ended at $(date)"
+                  echo "Pipeline ended at $(date +"%T")"
