@@ -18,6 +18,8 @@ jobs:
             - run: echo "🍏 This job's status is ${{ job.status }}."
             - run: npm install
             - run: npm run prettier
-            - run: npm run lint
+            - run: 'formatté'
             - run: npm run test
+            - run: 'testé'
             - run: npm run build
+            - run: 'buildé'
