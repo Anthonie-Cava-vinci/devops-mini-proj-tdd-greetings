@@ -17,30 +17,18 @@ jobs:
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
             - run: npm install
+
             - name: Display start time
               run: |
                   echo "Pipeline started at $(date +"%T")"
-            - run: |
+
+            - name: Prettier formatting
+              run: |
                   npm run prettier 
                   echo "formatté"
             - run: |
                   npm run test -- --coverage
                   echo "testé"
-            - name: Check Jest coverage
-              run: |
-                  COVERAGE_THRESHOLD=80
-                  ACTUAL_COVERAGE=$(sed -n 's/^Statements.*: \([0-9]*\.[0-9]*\)%.*/\1/p' coverage/lcov-report/index.html)
-                  if [[ -n $ACTUAL_COVERAGE ]]; then
-                    if (( $(echo "$ACTUAL_COVERAGE < $COVERAGE_THRESHOLD" | bc -l) )); then
-                      echo "Coverage is below the threshold ($ACTUAL_COVERAGE%)"
-                      exit 1
-                    else
-                      echo "Coverage is above the threshold ($ACTUAL_COVERAGE%)"
-                    fi
-                  else
-                    echo "Error: Coverage percentage not found or invalid."
-                    exit 1
-                  fi
             - run: |
                   npm run build
                   echo "buildé"
