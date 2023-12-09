@@ -28,6 +28,11 @@ jobs:
                   npm run prettier 
                   echo "formatté"
 
+            - name: Lint code
+              run: |
+                  npm run lint
+                  echo "linté"
+
             - name: Run Jest tests
               run: |
                   npm run test -- --coverage
