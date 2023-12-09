@@ -32,12 +32,16 @@ jobs:
               run: |
                   npm run test -- --coverage
                   echo "testé"
-            - run: |
+
+            - name: Building the app
+              run: |
                   npm run build
                   echo "buildé"
+
             - name: Display end time
               run: |
                   echo "Pipeline ended at $(date +"%T")"
+
             - name: Display success message
               if: ${{ success() }}
               run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
