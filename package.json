@@ -49,7 +49,7 @@
         "wrap-ansi-cjs": "^7.0.0"
     },
     "scripts": {
-        "test": "jest --coverage",
+        "test": "jest",
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
         "lint": "eslint .",
@@ -57,6 +57,20 @@
         "code:fix": "prettier --write . && eslint --fix .",
         "commit": "cz",
         "build": "webpack ./src/greet.js -o dist/"
+    },
+    "jest": {
+        "collectCoverage": true,
+        "collectCoverageFrom": [
+            "./src/**"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "Stmts": 80,
+                "Branch": 80,
+                "Funcs": 80,
+                "lines": 80
+            }
+        }
     },
     "author": "",
     "license": "ISC",
