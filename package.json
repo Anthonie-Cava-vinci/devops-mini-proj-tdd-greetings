@@ -60,14 +60,16 @@
     },
     "jest": {
         "collectCoverage": true,
-        "collectCoverageFrom": ["./src/**"],
+        "collectCoverageFrom": [
+            "./src/**"
+        ],
         "coverageThreshold": {
-          "global": {
-            "Stmts": 80,
-            "Branch": 80,
-            "Funcs": 80,
-            "lines": 80
-          }
+            "global": {
+                "Stmts": 80,
+                "Branch": 80,
+                "Funcs": 80,
+                "lines": 80
+            }
         }
     },
     "author": "",
@@ -77,6 +79,4 @@
             "path": "cz-conventional-changelog"
         }
     }
-
-    
 }
