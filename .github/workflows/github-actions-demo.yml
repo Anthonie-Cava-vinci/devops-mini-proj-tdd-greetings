@@ -1,6 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: [pull_request]
 jobs:
     Explore-GitHub-Actions:
         runs-on: ubuntu-latest
@@ -32,6 +32,11 @@ jobs:
               run: |
                   npm run lint
                   echo "linté"
+
+            - name: fixing code
+              run: |
+                  npm run code:fix
+                  echo "code fix"
 
             - name: Run Jest tests
               run: |
