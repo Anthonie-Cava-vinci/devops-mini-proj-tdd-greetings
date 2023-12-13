@@ -53,35 +53,35 @@ Liens utiles:
 -   Décrivez brièvement ce que fait votre fichier YML.
 
 ```bash
-<votre réponse ici>
+<Le fichier YML définit une pipeline d\'intégration continue utilisant GitHub Actions. La pipeline s\'exécute lorsqu\'une Pull Request est ouverte. Elle commence par l\'installation des dépendances, affiche l\'heure de commencement de la pipeline, formate le code, effectue le linting, exécute les tests avec Jest, construit l\'application, affiche l\'heure de fin de la pipeline, et indique le succès de la pipeline sans erreurs. >
 ```
 
 -   En particulier : à quoi sert le “on” ? dans votre fichier YML ? Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ?
 
 ```bash
-<votre réponse ici>
+<Le \"on\" spécifie les événements déclencheurs pour la pipeline. \"on push\" déclenche la pipeline lorsqu\'un commit est poussé sur n\'importe quelle branche, tandis que \"on pull_request\" déclenche la pipeline lorsqu\'une pull request est ouverte ou mise à jour. Pour des développeurs juniors, \"on pull_request\" est conseillé, car cela limite les exécutions aux changements proposés, ce qui est plus ciblé et évite une exécution inutile pour chaque push. >
 ```
 
 -   Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+<La différence entre les 2 est que \"run\" est utilisé pour exécuter des commandes dans une étape spécifique de la pipeline, tandis que \"run_on\" est utilisé pour lancer l\'ensemble de la pipeline, c\'est-à-dire toutes les exécutions>
 ```
 
 -   Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+<Dans la pipeline, \"use\" est utilisé pour spécifier l\'action que GitHub doit utiliser, en l\'occurence \"actions/checkout@v4\" afin de récupérer le code du référentiel, tandis que \"run\" est utilisé pour exécuter différentes commandes au sein d\'une étape.>
 ```
 
 -   Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+<Oui, les différentes étapes de la pipeline peuvent être interverties. Cependant, cela dépend du contexte du projet. Dans ce cas, certaines étapes, telles que l\'installation des dépendances, le formattage du code et le linting, sont généralement mieux placées au début, tandis que les tests et la construction de l\'application peuvent suivre.>
 ```
 
 -   Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ?
 
 ```bash
-<votre réponse ici>
+<Pour ajouter un test de sécurité avec le programme secure_app, il faut créer une nouvelle étape dans la pipeline. Les questions à se poser sont les suivantes : 1.Où placer cette étape dans la pipeline? 2.Comment installer et exécuter le programme secure_app? 3.Quels paramètres ou configurations sont nécessaires pour le test de sécurité? 4.Comment afficher les résultats du test de sécurité dans le projet?>
 ```
