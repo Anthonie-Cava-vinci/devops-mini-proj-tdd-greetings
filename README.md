@@ -4,6 +4,10 @@
 #Change package.json ("script":{"test":"jasmine"})
 #Don't forget to do npm i before npm run test
 
+# DevOps Mini-Projet 1
+
+point 10/20
+
 # DevOps Mini-Projet 2
 
 Travail de recherche , mettre en place de l'integration continue avec les GitHub Actions
