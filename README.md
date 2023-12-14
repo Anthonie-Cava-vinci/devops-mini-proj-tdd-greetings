@@ -16,6 +16,7 @@ Travail de recherche , mettre en place de l'integration continue avec les GitHub
 
 -   N° de groupe : 18
 -   Membres du groupe : BOUFFIOUX Loic, CAVA Anthonie, TRAN Thuy Duong Océane
+-   Lien vers le dépôt du code de la pipeline : https://github.com/Anthonie-Cava-vinci/devops-mini-proj-tdd-greetings/blob/pipeline/.github/workflows/github-actions.yml
 
 ## Énoncé
 
