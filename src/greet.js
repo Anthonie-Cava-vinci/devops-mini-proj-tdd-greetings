@@ -1,6 +1,6 @@
 function greet(name, language = 'EN') {
     if (!Array.isArray(name)) {
-        // Case 2: Handle null, undefined, '', " "
+        // Case 2: Handle null, undefined, '', ' '
         if (!name || name.trim() === '') {
             return 'Hello, my friend.'
         }
